@@ -28,7 +28,7 @@ useMemoState: <T, State, Result>(
 ) => T
 ```
 
-`createFetchOrFail`
+2. `createFetchOrFail`
 
 ### Usage
 
@@ -70,7 +70,7 @@ createFetchOrFail: <State, Api>() => (
 ) => Promise<void>
 ```
 
-`useThunk`
+3. `useThunk`
 
 
 ### Usage
@@ -94,7 +94,7 @@ useThunk: () => <Result = Promise<void>>(
 ```
 
 
-`createClearReduxWithFetching`
+4. `createClearReduxWithFetching`
 
 ### Usage
 
@@ -162,7 +162,7 @@ createClearReduxWithFetching: <State, Actions>(
 }
 ```
 
-`createFetchingRedux`
+5. `createFetchingRedux`
 
 ### Usage
 
