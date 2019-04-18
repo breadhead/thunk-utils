@@ -24,7 +24,7 @@ const defaultActions: FetchActions = {
 }
 
 export const createFetchOrFail = <State, Api>(
-  selectToken: (state: State) => string,
+  selectToken: (state: State) => Option<string>,
 ) => (
   fetchActions: FetchActions = defaultActions,
   execute: Execute<State, Api>,
@@ -41,7 +41,7 @@ export const createFetchOrFail = <State, Api>(
 
     await execute(
       dispatch,
-      (isProd = true) => createApi(Option.of(token), isProd),
+      (isProd = true) => createApi(token, isProd),
       getState,
     )
 
