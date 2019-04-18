@@ -14,22 +14,22 @@ interface FetchActions {
 type Execute<State, Api> = (
   dispatch: ThunkDispatch<State, ExtraArg<Api>, AnyAction>,
   getApi: () => Api,
-  getState: () => State
+  getState: () => State,
 ) => Promise<void | any>
 
 const defaultActions: FetchActions = {
   request: () => ({ type: '' }),
   success: () => ({ type: '' }),
-  failure: () => ({ type: '' })
+  failure: () => ({ type: '' }),
 }
 
 export const createFetchOrFail = <State, Api>() => (
   fetchActions: FetchActions = defaultActions,
-  execute: Execute<State, Api>
+  execute: Execute<State, Api>,
 ) => async (
   dispatch: ThunkDispatch<State, ExtraArg<Api>, AnyAction>,
   getState: () => State,
-  createApi: (token: Option<string>) => Api
+  createApi: (token: Option<string>) => Api,
 ) => {
   const { request, success, failure } = fetchActions
   try {
