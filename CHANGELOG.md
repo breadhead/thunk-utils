@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.1](https://github.com/breadhead/thunk-utils/compare/v2.1.0...v2.1.1) (2019-04-18)
+
+
+### Bug Fixes
+
+* move selectToken to first invocation ([5841a66](https://github.com/breadhead/thunk-utils/commit/5841a66))
+
+
+
 # [2.1.0](https://github.com/breadhead/thunk-utils/compare/v2.0.3...v2.1.0) (2019-04-18)
 
 
