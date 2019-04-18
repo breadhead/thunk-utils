@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '8'
+  - '10'
+cache: yarn
+script: yarn ci
+deploy:
+  provider: npm
+  email: uncleseneca@gmail.com
+  skip_cleanup: true
+  api_key:
+    secure: Lwkn9doCWUjjcTFqdivknUsG7ORrm92cNBNxyZCpuVXeEXHcR9hPqrGrQ0fQRYTzZCQjBMJvCAMfSNc5Ecn3okU4Zrc+mRr76mO0SCxhN3ya+i0gzjwBnC7Nbudfz3EzbzXPGLyL0PQmYzmXzB5kjfntLQZvNf8EC6Yfy1Esd4XfnlayDCMd0cDDaxyfGxIE+xShJ7Il3+LqVm/9KtVOb08wD61ABpiTR7JeAyWYR2LfGdgEJ59eTE3nCm53pbRlMw2PawHSirevQEAO1XgpdW4Lumzy9aPAAHQ5odfWrRchXWVT3Ql9U9pVsz96+/3FQMRgENmQPi3bwIGQ+Aga07npbNJzH+3EOnqzkq1dp1oCWkTRe8Wb3SN/NMUKq7SAy+TQOgXuX9RNssIyJzyu05x04worr8UgmPuUE1Y7msAVLnAZqqEgALcOyaMk8jkyliCgLmoD162ZxHiTI5obU81Kxvu/NY+CqB6G+lfFo6Zbyb+Mz3SQv4lE9M0rE0a+M0G5nMZb6gIexQtkVna37JWJEKQlz3xzxHJJFYddPI84WFvrnNcgIH3lRQbx++UDE2T62qN5TexhhQ983cj4pIDpQ6TBLfCq5Ws7IEFHwovzPSpEi+y5f1el9s7dGt3B6U5Ifm35z3wyAXQ6cdnePjkrvhKmYi4hvn+kOVMkf1Q=
+  on:
+    tags: true
+    repo: breadhead/denormalize
