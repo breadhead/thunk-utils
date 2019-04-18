@@ -32,7 +32,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn soda lint-staged && yarn test",
+      "pre-commit": "yarn soda lint-staged",
       "commit-msg": "yarn soda commitlint"
     }
   },
@@ -45,6 +45,6 @@
     "build": "tsc",
     "prepare": "install-self-peers -- --ignore-scripts && yarn build",
     "types": "tsc",
-    "ci": "yarn s lint && yarn test"
+    "ci": "yarn s lint"
   }
 }
