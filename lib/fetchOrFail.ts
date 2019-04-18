@@ -13,7 +13,7 @@ interface FetchActions {
 
 type Execute<State, Api> = (
   dispatch: ThunkDispatch<State, ExtraArg<Api>, AnyAction>,
-  getApi: () => Api,
+  getApi: (isProd?: boolean) => Api,
   getState: () => State,
 ) => Promise<void | any>
 
@@ -26,17 +26,23 @@ const defaultActions: FetchActions = {
 export const createFetchOrFail = <State, Api>() => (
   fetchActions: FetchActions = defaultActions,
   execute: Execute<State, Api>,
+  selectToken: (state: State) => string,
 ) => async (
   dispatch: ThunkDispatch<State, ExtraArg<Api>, AnyAction>,
   getState: () => State,
-  createApi: (token: Option<string>) => Api,
+  createApi: (token: Option<string>, isProd?: boolean) => Api,
 ) => {
   const { request, success, failure } = fetchActions
   try {
     dispatch(request())
 
-    // TODO: fix token
-    await execute(dispatch, () => createApi(Option.of('')), getState)
+    const token = selectToken(getState())
+
+    await execute(
+      dispatch,
+      (isProd = true) => createApi(Option.of(token), isProd),
+      getState,
+    )
 
     dispatch(success())
   } catch (e) {
