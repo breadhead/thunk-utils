@@ -4,9 +4,9 @@ Utility belt for react redux app
 
 ## API
 
-1. `useMemoState`
+## useMemoState
 
-### Usage
+#### Usage
 
 ```
 
@@ -18,7 +18,7 @@ const article = useMemoState(
 
 ```
 
-### Type
+#### Type
 
 ```
 useMemoState: <T, State, Result>(
@@ -28,9 +28,9 @@ useMemoState: <T, State, Result>(
 ) => T
 ```
 
-2. `createFetchOrFail`
+## createFetchOrFail
 
-### Usage
+#### Usage
 
 ```
 
@@ -56,7 +56,7 @@ export const fetchLecturesList = () =>
 
 ```
 
-### Type
+#### Type
 
 
 ```
@@ -70,10 +70,10 @@ createFetchOrFail: <State, Api>() => (
 ) => Promise<void>
 ```
 
-3. `useThunk`
+## useThunk
 
 
-### Usage
+#### Usage
 
 ```
 
@@ -85,7 +85,7 @@ const dispatch = useThunk()
 
 ```
 
-### Type
+#### Type
 
 ```
 useThunk: () => <Result = Promise<void>>(
@@ -94,9 +94,9 @@ useThunk: () => <Result = Promise<void>>(
 ```
 
 
-4. `createClearReduxWithFetching`
+## createClearReduxWithFetching
 
-### Usage
+#### Usage
 
 ```
 
@@ -131,7 +131,7 @@ export { reducer, actions }
 
 ```
 
-### Type
+#### Type
 
 
 ```
@@ -162,9 +162,9 @@ createClearReduxWithFetching: <State, Actions>(
 }
 ```
 
-5. `createFetchingRedux`
+## createFetchingRedux
 
-### Usage
+#### Usage
 
 ```
 
@@ -179,7 +179,7 @@ export { reducer, actions }
 
 ```
 
-### Type
+#### Type
 
 
 ```
