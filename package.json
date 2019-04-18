@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/breadhead/thunk-utils.git"
   },
-  "description": "Pack of utilities for redux",
+  "description": "Utility belt for react redux app",
   "author": "Vladimir Golotin <uncleseneca@gmail.com>",
   "license": "MIT",
   "devDependencies": {
