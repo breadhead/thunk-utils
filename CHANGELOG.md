@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.0.0](https://github.com/breadhead/thunk-utils/compare/v1.1.0...v2.0.0) (2019-04-18)
+
+
+### Code Refactoring
+
+* refactor useMemoState and useThunk ([e691ca4](https://github.com/breadhead/thunk-utils/commit/e691ca4))
+
+
+### BREAKING CHANGES
+
+* createUseThunk => useThunk, createUseMemoState => useMemoState
+
+
+
 # 1.1.0 (2019-04-18)
 
 
