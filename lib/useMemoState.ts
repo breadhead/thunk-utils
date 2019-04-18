@@ -2,14 +2,14 @@ import { useCallback, useEffect } from 'react'
 import { useMappedState } from 'redux-react-hook'
 import isFunction from 'lodash.isfunction'
 
-import { createUseThunk } from './useThunk'
+import { useThunk } from './useThunk'
 
-export const createUseMemoState = <UserState, Api>() => <T>(
-  createSelector: () => (state: UserState) => T,
+export const useMemoState = <T, State>(
+  createSelector: () => (state: State) => T,
   refetchAction: () => any,
-  deps: any[]
+  deps: any[],
 ) => {
-  const dispatch = createUseThunk<UserState, Api>()()
+  const dispatch = useThunk()
 
   const selector = useCallback(createSelector(), deps)
 
