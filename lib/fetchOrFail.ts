@@ -23,10 +23,11 @@ const defaultActions: FetchActions = {
   failure: () => ({ type: '' }),
 }
 
-export const createFetchOrFail = <State, Api>() => (
+export const createFetchOrFail = <State, Api>(
+  selectToken: (state: State) => string,
+) => (
   fetchActions: FetchActions = defaultActions,
   execute: Execute<State, Api>,
-  selectToken: (state: State) => string,
 ) => async (
   dispatch: ThunkDispatch<State, ExtraArg<Api>, AnyAction>,
   getState: () => State,
