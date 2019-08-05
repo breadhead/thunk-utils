@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.3"></a>
+## [2.1.3](https://github.com/breadhead/thunk-utils/compare/v2.1.2...v2.1.3) (2019-08-05)
+
+
+### Bug Fixes
+
+* return value in action ([abfd9c0](https://github.com/breadhead/thunk-utils/commit/abfd9c0))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [2.1.2](https://github.com/breadhead/thunk-utils/compare/v2.1.1...v2.1.2) (2019-04-18)
 
 
