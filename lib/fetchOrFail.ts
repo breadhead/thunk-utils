@@ -39,13 +39,15 @@ export const createFetchOrFail = <State, Api>(
 
     const token = selectToken(getState())
 
-    await execute(
+    const result = await execute(
       dispatch,
       (isProd = true) => createApi(token, isProd),
       getState,
     )
 
     dispatch(success())
+
+    return result
   } catch (e) {
     dispatch(failure(tryOr(() => e.response.data.message, e.message)))
 
